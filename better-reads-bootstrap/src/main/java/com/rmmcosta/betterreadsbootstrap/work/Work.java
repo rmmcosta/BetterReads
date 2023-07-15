@@ -1,4 +1,4 @@
-package com.rmmcosta.betterreadsbootstrap.author;
+package com.rmmcosta.betterreadsbootstrap.work;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,12 +6,15 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
-@Table
+@Table("books_by_id")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Author {
+public class Work {
     @PrimaryKey
-    private String key;
-    private String name;
+    private String bookKey;
+    private String bookTitle;
+    private String cover;
+    private String authorName;
+    private String authorKey;
 }
